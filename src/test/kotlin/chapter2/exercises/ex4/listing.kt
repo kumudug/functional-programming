@@ -8,7 +8,7 @@ import utils.SOLUTION_HERE
 class Exercise4 : WordSpec({
     // tag::init[]
     fun <A, B, C> uncurry(f: (A) -> (B) -> C): (A, B) -> C =
-        { a: A, b: B -> f(a)(b) }
+        { a, b -> f(a)(b) }
     // end::init[]
 
     "uncurry" should {
