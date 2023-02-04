@@ -8,7 +8,7 @@ import utils.SOLUTION_HERE
 class Exercise3 : WordSpec({
     // tag::init[]
     fun <A, B, C> curry(f: (A, B) -> C): (A) -> (B) -> C =
-        { a: A -> { b: B -> f(a, b) } }
+        { a -> { b -> f(a, b) } }
     // end::init[]
 
     "curry" should {
