@@ -7,6 +7,8 @@ import utils.SOLUTION_HERE
 //TODO: Enable tests by removing `!` prefix
 class Exercise4 : WordSpec({
     // tag::init[]
+    //Since -> associate to the right (A) -> ((B) -> C)
+    //    can be written as (B) -> C
     fun <A, B, C> uncurry(f: (A) -> (B) -> C): (A, B) -> C =
         { a, b -> f(a)(b) }
     // end::init[]
